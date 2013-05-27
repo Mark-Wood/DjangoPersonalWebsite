@@ -1,0 +1,15 @@
+{% extends "base_2col.html" %}
+
+{% block billboard %}
+{% endblock %}
+
+{% block related %}
+<h3>Latest blog posts</h3>
+<ul>
+    {% for post in post_list %}
+    <li><a href="{% url 'blog:post-detail' post.slug %}">{{ post.title }}</a></li>
+    {% empty %}
+    <li>Sorry, no posts yet. Check back soon!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

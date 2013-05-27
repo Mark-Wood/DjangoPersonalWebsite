@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block columnwrap %}
+<div id="content" class="multiple-columns">
+    {% block content %}{% endblock %}
+</div>
+<div id="related">
+    {% block related %}{% endblock %}
+</div>
+{% endblock %}
